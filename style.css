@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --background-soft-violet: #af67e9;
+  --background-soft-blue: #6565e7;
+  --light-gray: #e7e7e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(101, 101, 231, 1) 9%,
+    rgba(123, 102, 232, 1) 29%,
+    rgba(131, 102, 232, 1) 49%,
+    rgba(147, 102, 232, 1) 63%,
+    rgba(175, 103, 233, 1) 88%
+  );
+}
+
+.container {
+  display: flex;
+  background: white;
+  max-height: 40em;
+  max-width: 80em;
+  margin: 0 2em 0 2em;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.accordian {
+    margin-top: 3em;
+}
+
+.img1 img {
+  position: relative;
+  bottom: 11em;
+  right: 30em;
+  height: 55em;
+  margin: 0;
+}
+
+.img2 img {
+  position: relative;
+  right: 5em;
+  bottom: 45em;
+  width: 30em;
+}
+
+.box-img {
+  margin: 0;
+  position: relative;
+  top: 5em;
+  left: 7em;
+  z-index: 99;
+}
+
+.body {
+  position: relative;
+  right: 15em;
+  width: 40em;
+  margin-top: 6em;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button p {
+  margin: 1em 0 1em 0;
+  font-size: 17px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.answer {
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  font-size: 16px;
+  color: #858585;
+}
+
+.answer.active {
+  padding-top: 0.5em;
+  max-height: 10em;
+  padding-bottom: 1em;
+}
+
+.button.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s linear;
+}
+
+.button.active {
+  font-weight: bold;
+}
+
+.button p:hover {
+  color: var(--soft-red);
+  transition: all .15s ease;
+}
